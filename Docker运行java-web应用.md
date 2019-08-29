@@ -49,8 +49,8 @@ mysql               latest              62a9f311b99c        2 weeks ago         
 [root@nodeb4 docker]# docker run -d -p 8888:8080 jpress
 a80aec4ef41a8c1fdac7025b4112585643ed581dfd17c99cd2369a2a81e03d31
 ```
-``` bash
 * 启动mysql
+``` bash
 [root@nodeb4 docker]# docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=jpress mysql
 67a3c97a41c71115fb3397689eaf0e172c655b1493c251751f24be745715dd6e
 ``` 
