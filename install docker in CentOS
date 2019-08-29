@@ -1,0 +1,54 @@
+1. 使用 sudo 或 root 权限的用户登入终端
+
+2. 确保yum是最新的
+$ yum update
+
+3. 添加 yum 仓库
+tee /etc/yum.repos.d/docker.repo <<-'EOF'
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF
+
+4. 安装 docker
+$ yum install -y docker-engine
+
+5. 安装成功后，使用 docker version 命令查看是否安装成功
+[root@nodeb4 ~]# docker version
+Client:
+ Version:      17.05.0-ce
+ API version:  1.29
+ Go version:   go1.7.5
+ Git commit:   89658be
+ Built:        Thu May  4 22:06:25 2017
+ OS/Arch:      linux/amd64
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+
+6. 启动 docker
+$ systemctl start docker.service
+
+7. 验证安装是否成功(有 client 和 service 两部分表示 docker 安装启动都成功了)
+[root@nodeb4 ~]# docker version
+Client:
+ Version:      17.05.0-ce
+ API version:  1.29
+ Go version:   go1.7.5
+ Git commit:   89658be
+ Built:        Thu May  4 22:06:25 2017
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      17.05.0-ce
+ API version:  1.29 (minimum version 1.12)
+ Go version:   go1.7.5
+ Git commit:   89658be
+ Built:        Thu May  4 22:06:25 2017
+ OS/Arch:      linux/amd64
+ Experimental: false
+ 
+ 8. 设置 server 开机自启动
+ [root@nodeb4 ~]# systemctl enable docker
+Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
