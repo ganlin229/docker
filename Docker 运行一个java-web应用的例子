@@ -50,6 +50,8 @@ a80aec4ef41a        jpress              "catalina.sh run"        42 seconds ago 
 
 8.访问 tomcat
 http://192.168.100.74:8888
+![image](https://github.com/yuanyaru/docker/blob/master/images/tomcat.jpg)
 
 9.访问应用 jpress
 http://192.168.100.74:8888/jpress-web-newest
+![image](https://github.com/yuanyaru/docker/blob/master/images/jpress.jpg)
