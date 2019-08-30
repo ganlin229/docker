@@ -82,7 +82,9 @@ mysql> alter user 'root'@'%' identified with mysql_native_password by 'root';
 Query OK, 0 rows affected (0.25 sec)
 ```
 成功访问：
+
 ![image](https://github.com/yuanyaru/docker/blob/master/images/mysql-success.jpg)
 
 用 navicat 工具连接数据库：
+
 ![image](https://github.com/yuanyaru/docker/blob/master/images/navicat-mysql.jpg)
