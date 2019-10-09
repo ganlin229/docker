@@ -1,6 +1,6 @@
 1. 使用 sudo 或 root 权限的用户登入终端
 
-2. 确保yum是最新的
+2. 确保 yum 是最新的
 $ yum update
 
 3. 添加 yum 仓库
