@@ -16,5 +16,5 @@ print client.images(['configtool'])
 print client.containers(['configtool'])
 # docker info命令的那些输出
 print client.info()
-# 相当于docker start和stop制定容器
+# 相当于docker start和stop指定容器
 # client.start/stop(name)　　
