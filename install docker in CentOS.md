@@ -64,7 +64,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 ``` bash
 vim /usr/lib/systemd/system/docker.service
 # ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 --containerd=/run/containerd/containerd.sock
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H 0.0.0.0:2375
 ```
 * 使用以下命令重新加载配置文件和重启 docker
 ``` bash
@@ -77,4 +77,3 @@ systemctl restart docker
 root      5563     1  3 04:07 ?        00:00:00 /usr/bin/dockerd -H tcp://0.0.0.0:2375 --containerd=/run/containerd/containerd.sock
 ```
 可以看到已经开启了端口。
-* 开启远程连接后，本地使用docker命令会卡，原因不明。
