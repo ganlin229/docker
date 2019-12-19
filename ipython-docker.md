@@ -1,5 +1,7 @@
-1. 安装ipython
-yum install ipython
+1. 安装 ipython
+``` bash
+yum install -y ipython
+```
 2. 键入 ipython 就进入 ipython 的 shell 了
 * 实例化client
 * 输入client.然后按tab键要求补全的话，就会显示出所有client实例可以调用的方法和属性
