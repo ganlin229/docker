@@ -1,8 +1,8 @@
-1. 安装 ipython
+1.安装 ipython
 ``` bash
 yum install -y ipython
 ```
-2. 键入 ipython 就进入 ipython 的 shell 了
+2.键入 ipython 就进入 ipython 的 shell 了
 * 实例化client
 * 输入client.然后按tab键要求补全的话，就会显示出所有client实例可以调用的方法和属性
 * 对于一个属性比如client.containers,后面输入？再按回车，就可以看到这个属性相关的一些说明和用法
