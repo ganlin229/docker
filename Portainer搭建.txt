@@ -1,0 +1,17 @@
+Docker使用Portainer搭建可视化界面，Portainer一个轻量级的Docker环境管理UI。
+
+1. 下载Portainer镜像
+# 查询当前有哪些Portainer镜像
+# docker search portainer
+
+2、下载镜像
+# docker pull portainer/portainer
+
+3、单机版运行
+# docker run -d -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --name prtainer-test --net=host portainer/portainer
+
+该语句用宿主机9000端口关联容器中的9000端口，并给容器起名为portainer-test。执行完该命令之后，使用该机器IP:PORT即可访问Portainer。
+
+4. 访问方式：http://IP:9000
+
+首次登陆需要注册用户，给admin用户设置密码。

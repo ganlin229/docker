@@ -69,22 +69,24 @@ http://192.168.100.74:8888
 
 #### 访问应用 jpress
 http://192.168.100.74:8888/jpress-web-newest
-![image](https://github.com/yuanyaru/docker/blob/master/images/jpress.jpg)
+![image](images/jpress.jpg)
 
 #### 在本地访问 docker 中启动的 mysql
-![image](https://github.com/yuanyaru/docker/blob/master/images/mysql-error.jpg)
+![image](images/mysql-error.jpg)
 
 解决方法：
 ``` bash
 mysql> [root@nodeb4 ~]# docker exec -it 67a3c97a41c7 bash
 root@67a3c97a41c7:/# mysql -u root -p
 mysql> alter user 'root'@'%' identified with mysql_native_password by 'root';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
 Query OK, 0 rows affected (0.25 sec)
+flush privileges;
 ```
 成功访问：
 
-![image](https://github.com/yuanyaru/docker/blob/master/images/mysql-success.jpg)
+![image](images/mysql-success.jpg)
 
 用 navicat 工具连接数据库：
 
-![image](https://github.com/yuanyaru/docker/blob/master/images/navicat-mysql.jpg)
+![image](images/navicat-mysql.jpg)
