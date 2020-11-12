@@ -1,0 +1,5 @@
+1. docker pull abh1nav/dockerui
+
+2. docker run -d -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --name dockerui --privileged --net=host abh1nav/dockerui
+
+3. 浏览器查看dockerui：http://ip:9000  

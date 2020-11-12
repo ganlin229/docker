@@ -8,7 +8,7 @@ Docker使用Portainer搭建可视化界面，Portainer一个轻量级的Docker�
 # docker pull portainer/portainer
 
 3、单机版运行
-# docker run -d -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --name prtainer-test --net=host portainer/portainer
+# docker run -d -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --name portainer --net=host portainer/portainer
 
 该语句用宿主机9000端口关联容器中的9000端口，并给容器起名为portainer-test。执行完该命令之后，使用该机器IP:PORT即可访问Portainer。
 
